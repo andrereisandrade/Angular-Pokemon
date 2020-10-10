@@ -1,0 +1,41 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/tmp
+/lib
+/dist
+/--prod
+/mock
+
+# dependencies
+/node_modules
+/coverage
+/test
+npm-debug.*
+lint-results.*
+.scannerwork
+
+# Ignored files
+*.d.ts
+*.map
+*.metadata.json
+/component/*/*.js
+*.js
+package-lock.json
+
+#Keep karma and protractor
+!*.conf.js
+
+# Keep gulpfile.js
+!*gulpfile.js
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+/src/app/lib
+/src/app/index.ts
+
+#mac config
+*DS_Store
+/apply-translation/new-files/*

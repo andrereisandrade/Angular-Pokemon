@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="title">
+    <h1 class="text-center">Pokemons</h1>
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" (input)="search($event)" placeholder="Procurar por Pokemon"
+      aria-label="Pesquise exercicios por aqui">
+    <span class="input-group-btn">
+      <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+    </span>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Carta</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Tipos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pokemon of pokemons$ |async">
+        <th scope="row">{{ pokemon.id }}</th>
+        <td>
+          <img [src]="pokemon.imageUrl" class="mr-2" style="width: 60px">
+        </td>
+        <td>{{ pokemon.name}}</td>
+        <td>{{ pokemon.types }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

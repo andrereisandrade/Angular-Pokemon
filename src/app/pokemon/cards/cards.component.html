@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemons$ |async" class="col-md-4">
+      <a [routerLink]="[pokemon.id]">
+        <div class="custom-card">
+
+          <div class="col-lg-12" [showImage]="pokemon.imageUrl" class="image">
+          </div>
+          <div class="caption">
+            <p><b>{{ pokemon.name }}</b></p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
